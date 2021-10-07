@@ -6,7 +6,7 @@ from time import sleep
 
 #VACIAR LA TERMINAL
 
-#system('cls')                  Este comando sirve en Windows 10
+#system('cls')                  Este comando sirve en Windows
 system('clear')                 #Este comando sirve en Linux y Mac
 
 #MENSAJES INICIALES

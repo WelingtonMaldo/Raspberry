@@ -2,6 +2,12 @@
 # 1a libreria  = para configurar los pines GPIO
 # 2a libreria para hacer delays
 
+#git config --global user.email "welington.maldo@gmail.com" 
+#git config --global user.name "WelingtonMaldo"
+#git branch -M main
+#git push -u origin main
+
+
 #from RPi import GPIO
 import RPi.GPIO as GPIO
 import time

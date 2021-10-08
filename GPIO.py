@@ -8,7 +8,7 @@ import time
 import sys, select
 from os import system
 
-system('clear')
+system('clear')    #Limpiar la terminal 
 
 #Se configura los pines de la raspberry
 GPIO.setmode(GPIO.BOARD)                           #Esto es para poder llamar a los Pines conforme estan numerado "fisicamente" en la raspberry 

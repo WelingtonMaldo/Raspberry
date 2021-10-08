@@ -24,7 +24,7 @@ GPIO.setup(11, GPIO.OUT, initial = 0)
 Contador = 0
 Resto = 0
 Continuar = True
-Temporizador = 1.5
+Temporizador = 3.5
 
 while Continuar == True:
     Contador = Contador+1
@@ -58,7 +58,7 @@ while Continuar == True:
         if (i):
             Respuesta = sys.stdin.readline().strip()
             print('\nLa respuesta es...',Respuesta )
-            Respuesta = ''
+            
         else:
             Respuesta = 'N'
             print("No se obtuvo respuesta del usuario\n")
@@ -68,8 +68,3 @@ while Continuar == True:
             Continuar=False
            # sys.exit()                         Esta linea termina la ejecucion completa
     
-
-
-
-
-

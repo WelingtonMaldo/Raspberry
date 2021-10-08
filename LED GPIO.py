@@ -66,7 +66,7 @@ while Continuar == True:
         if Respuesta.upper() == 'Y':
             print("Se finaliza la ejecución\n")
             Continuar=False
-           # sys.exit()
+           # sys.exit()                         Esta linea termina la ejecucion completa
     
 
 

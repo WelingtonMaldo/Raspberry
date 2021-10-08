@@ -18,36 +18,42 @@ GPIO.setmode(GPIO.BOARD)
 # GPIO 4
 #BOARD --> GPIO.setup(7, GPIO.OUT)  --> Corresponde a la posición fisica en la placa Raspberry
 #BCM   --> GPIO.setup(4, GPIO.OUT)  --> Corresponde al numero de GPIO que esta descrito en la memoria interna
-
-GPIO.setup(7, GPIO.OUT, initial = 0)
-GPIO.setup(11, GPIO.OUT, initial = 0)
+Pin_1 = 11
+Pin_2 = 13
 Contador = 0
 Resto = 0
 Continuar = True
 Temporizador = 3.5
+Delay_1 = 0.1
+Delay_2 = 0.2
+Divisor = 10
+
+GPIO.setup(Pin_1, GPIO.OUT, initial = 0)
+GPIO.setup(Pin_2, GPIO.OUT, initial = 0)
+
 
 while Continuar == True:
     Contador = Contador+1
-    Resto = Contador%5
+    Resto = Contador%Divisor
     #print('Contador = ',Contador,'\n')
 
-    GPIO.output(7,True)
-    GPIO.output(11,True)
-    time.sleep(0.2)
-    GPIO.output(7,False)
-    GPIO.output(11,True)
-    time.sleep(0.2)
-    GPIO.output(7,True)
-    GPIO.output(11,False)
-    time.sleep(0.2)
-    GPIO.output(7,False)
-    GPIO.output(11,True)
-    time.sleep(0.2)
-    GPIO.output(7,True)
-    GPIO.output(11,False)
-    GPIO.output(7,False)
+    GPIO.output(Pin_1,True)
+    GPIO.output(Pin_2,True)
+    time.sleep(Delay_1)
+    GPIO.output(Pin_1,False)
+    GPIO.output(Pin_2,True)
+    time.sleep(Delay_1)
+    GPIO.output(Pin_1,True)
+    GPIO.output(Pin_2,False)
+    time.sleep(Delay_1)
+    GPIO.output(Pin_1,False)
+    GPIO.output(Pin_2,True)
+    time.sleep(Delay_1)
+    GPIO.output(Pin_1,True)
+    GPIO.output(Pin_2,False)
+    GPIO.output(Pin_1,False)
     
-    time.sleep(0.25)
+    time.sleep(Delay_2)
     if Resto ==  0:
         
         print('Temporizador: %g segundos para responder'%Temporizador)
